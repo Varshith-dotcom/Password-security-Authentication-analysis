@@ -1,0 +1,8 @@
+def verify_password(stored_hash, salt, input_password):
+    new_hash = hashlib.pbkdf2_hmac(
+        'sha256',
+        input_password.encode(),
+        salt,
+        100000
+    )
+    return new_hash == stored_hash
