@@ -1,0 +1,27 @@
+Authentication Flow (Flowchart)
+flowchart TD
+    A[User enters password] --> B[Hash password]
+    B --> C[Compare with stored hash]
+    C -->|Match| D[Login Successful]
+    C -->|No Match| E[Access Denied]
+
+->  Password Hashing Diagram
+sequenceDiagram
+    participant User
+    participant App
+    participant DB
+
+    User->>App: Enter Password
+    App->>App: Hash + Salt
+    App->>DB: Compare Hash
+    DB-->>App: Match / No Match
+
+-> Practical Implementation (Python)
+hash_password.py
+import hashlib
+
+password = "Cyber@123"
+hashed = hashlib.sha256(password.encode()).hexdigest()
+
+print("Original Password:", password)
+print("Hashed Password:", hashed)
