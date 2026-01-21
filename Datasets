@@ -1,0 +1,38 @@
+-> Dataset (Sample)
+ passwords_dataset.csv
+username,password
+user1,123456
+user2,password
+user3,admin123
+user4,Welcome@123
+
+
+ Used for:
+
+Dictionary attack simulation
+
+Password strength testing
+
+ Password Strength Checker (Code)
+import re
+
+def check_strength(password):
+    if len(password) < 8:
+        return "Weak"
+    if not re.search("[A-Z]", password):
+        return "Weak"
+    if not re.search("[0-9]", password):
+        return "Weak"
+    if not re.search("[@#$%^&*]", password):
+        return "Weak"
+    return "Strong"
+
+print(check_strength("Cyber@123"))
+
+ Security Best Practices:
+
+ Use bcrypt / Argon2
+ Enable MFA (Multi-Factor Authentication)
+ Never store plaintext passwords
+ Use account lockout
+ Apply rate limiting
