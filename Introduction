@@ -1,0 +1,9 @@
+Password security is a critical component of modern cybersecurity systems. Authentication is the process of verifying a user’s identity, and passwords are the most commonly used authentication method. If passwords are weak or improperly stored, attackers can easily compromise user accounts and sensitive data.
+
+One of the major risks in password-based systems is the use of weak passwords such as “123456” or “password.” These can be cracked using brute-force or dictionary attacks. Attackers may also use credential stuffing, where stolen username–password pairs from one website are tested on other platforms. Phishing attacks further increase risk by tricking users into revealing their credentials.
+
+To protect passwords, systems should never store them in plain text. Instead, passwords must be hashed using secure algorithms such as SHA-256, bcrypt, or Argon2. Adding a salt to each password ensures that even identical passwords produce different hashes, protecting against rainbow table attacks. Key stretching techniques further slow down attackers by increasing computation time.
+
+Modern authentication systems also implement additional security measures such as account lockouts, rate limiting, and multi-factor authentication (MFA). These practices significantly reduce the risk of unauthorized access.
+
+In conclusion, strong password policies combined with secure hashing techniques and modern authentication controls are essential to protect user accounts and maintain system security.
